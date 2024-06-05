@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .menu-buttons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .menu-buttons button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: background-color 0.3s;
+    }
+    .menu-buttons button:hover {
+        background-color: #333;
+        color: #fff;
+    }
+    .menu-items {
+        display: none;
+    }
+    .menu-items.active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu-buttons">
+        <button onclick="showMenu('breakfast')">Breakfast</button>
+        <button onclick="showMenu('lunch')">Lunch</button>
+    </div>
+    
+    <div id="breakfast" class="menu-items active">
+        <h2>Breakfast Menu</h2>
+        <ul>
+            <li>Eggs Benedict - $8.99</li>
+            <li>Pancakes - $6.99</li>
+            <li>French Toast - $7.99</li>
+        </ul>
+    </div>
+    
+    <div id="lunch" class="menu-items">
+        <h2>Lunch Menu</h2>
+        <ul>
+            <li>Club Sandwich - $9.99</li>
+            <li>Caesar Salad - $7.99</li>
+            <li>Vegetarian Wrap - $8.99</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function showMenu(menu) {
+        var menus = document.querySelectorAll('.menu-items');
+        menus.forEach(function(item) {
+            if (item.id === menu) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
