@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakoura</title>
+    <style>
+        body {
+            background-color: #f0efe1; /* Page background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: absolute;
+            top: 20px;
+        }
+
+        .logo {
+            width: 170px;
+            height: auto;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .custom-button {
+            background-color: #bae479; /* Green background */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .custom-button:hover {
+            background-color: #647e3c; /* Darker green on hover */
+        }
+        .custom-button a {
+      text-decoration: none;
+
+    }
+     .custom-button a {
+      text-decoration: inherit;
+    }
+
+    /* Reset visited link styles */
+    .custom-button a:visited {
+      color: inherit;
+    }
+
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Page</title>
+  <style>
+    /* Same styles as before */
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../static/Layer1.png" alt="Logo" class="logo">
+  </header>
+  <div class="button-container">
+    <button class="custom-button" onclick="showPhoto('../static/menuen.jpeg')">
+      <img src="placeholder.jpg" alt="English Menu">
+    </button>
+    <button class="custom-button" onclick="showPhoto('photo2.jpg')">
+      <img src="placeholder.jpg" alt="Turkish Menu">
+    </button>
+     <button class="custom-button" onclick="showPhoto('photo2.jpg')">
+      <img src="placeholder.jpg" alt="Arabic Menu">
+    </button>
+    <button class="custom-button">
+     
+      <a href="https://maps.app.goo.gl/FyWypkh82GD6peyJA?g_st=iw" target="_blank">Location</a>
+    </button>
+    <button class="custom-button">
+    
+      <a href="https://www.instagram.com/hakoura.tr" target="_blank">Instagram</a>
+    </button>
+  </div>
+
+  <script>
+    function showPhoto(imagePath) {
+      // Open the image in a new tab/window
+      window.open(imagePath, '_blank');
+    }
+  </script>
+</body>
+
+</body>
+</html>
+
+</html>
